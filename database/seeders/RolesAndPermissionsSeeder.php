@@ -74,6 +74,8 @@ class RolesAndPermissionsSeeder extends Seeder
             DocumentCategory::class,
             Group::class,
             StorageFile::class,
+            \App\Models\PageBlock::class,
+            \App\Models\Page::class,
         ])
             ->unique()
             ->map(fn($modelClass) => str(class_basename($modelClass))->trim()->snake()->toString())
